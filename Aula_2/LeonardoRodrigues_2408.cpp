@@ -25,6 +25,8 @@ arvore criarNo(int chave)
 	novo->direita = NULL;
 	novo->esquerda = NULL;
 	novo->chave = chave;
+	
+	return novo;
 }
 
 int main()
