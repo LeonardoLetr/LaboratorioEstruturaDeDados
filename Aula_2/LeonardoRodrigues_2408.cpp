@@ -2,7 +2,7 @@
 #include <cstdlib>
 
 //Leonardo Rodrigues Batista Geraldo RA:00101457
-//Ciencia da Computação 4 semestre
+//Ciencia da ComputaÃ§Ã£o 4 semestre
 
 struct no {
 	int chave;
@@ -10,23 +10,26 @@ struct no {
 	struct no* esquerda;
 };
 
-typedef struct no arvore;
+typedef struct no* arvore;
 
-// Função apenas para inicializar a arvore binaria
-arvore* inicializar()
+// FunÃ§Ã£o apenas para inicializar a arvore binaria
+arvore inicializar()
 {
 	return NULL;
 }
 
-// Função que que criara um novo Nó da arvore e retorna o novo Nó
-arvore* criarNo()
+// FunÃ§Ã£o que que criara um novo NÃ³ da arvore e retorna o novo NÃ³
+arvore criarNo(int chave)
 {
-	arvore* novo = (arvore*) malloc(sizeof(arvore));
+	arvore novo = (arvore) malloc(sizeof(arvore));
+	novo->direita = NULL;
+	novo->esquerda = NULL;
+	novo->chave = chave;
 }
 
 int main()
 {
-	arvore* arv;
+	arvore arv;
 	
 	arv = inicializar();
 	
