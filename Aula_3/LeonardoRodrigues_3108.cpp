@@ -2,7 +2,7 @@
 #include <cstdlib>
 
 //Leonardo Rodrigues Batista Geraldo RA:00101457
-//Ciencia da Computação 4 semestre
+//Ciencia da ComputaÃ§Ã£o 4 semestre
 
 struct no {
 	int chave;
@@ -12,13 +12,13 @@ struct no {
 
 typedef struct no* arvore;
 
-// Função apenas para inicializar a arvore binaria
+// FunÃ§Ã£o apenas para inicializar a arvore binaria
 arvore inicializar()
 {
 	return NULL;
 }
 
-// Função que que criara um novo Nó da arvore e retorna o novo Nó
+// FunÃ§Ã£o que que criara um novo NÃ³ da arvore e retorna o novo NÃ³
 arvore criarNo(int chave)
 {
 	arvore novo = (arvore) malloc(sizeof(arvore));
@@ -28,8 +28,8 @@ arvore criarNo(int chave)
 	return novo;
 }
 
-// Função para adicionar um novo Nó na raiz
-// que utiliza recursividade para descobrir a posição
+// FunÃ§Ã£o para adicionar um novo NÃ³ na raiz
+// que utiliza recursividade para descobrir a posiÃ§Ã£o
 // que deve ser inserida
 arvore adicionar(arvore raiz, arvore no)
 {
@@ -53,8 +53,8 @@ arvore adicionar(arvore raiz, arvore no)
 }
 
 
-//Função que ira exibir na tela os valores que existem na raiz
-// em Pré-ordem utilizando a raiz de forma recursiva
+//FunÃ§Ã£o que ira exibir na tela os valores que existem na raiz
+// em PrÃ©-ordem utilizando a raiz de forma recursiva
 void exibirArvore(arvore raiz)
 {
 	if(raiz != NULL)
@@ -68,8 +68,8 @@ void exibirArvore(arvore raiz)
 	}
 }
 
-// Função que retorna o total de Nós que existem
-// usando a raiz para realizar uma função recursiva
+// FunÃ§Ã£o que retorna o total de NÃ³s que existem
+// usando a raiz para realizar uma funÃ§Ã£o recursiva
 // No metodo de busca In-ordem
 int qtdNo(arvore raiz)
 {
@@ -79,10 +79,10 @@ int qtdNo(arvore raiz)
 	}
 	
 	return qtdNo(raiz->esquerda) + 1 + qtdNo(raiz->direita); //In-ordem
-	//return qtdNo(raiz->esquerda) + qtdNo(raiz->direita) + 1 //Pós-ordem 
+	//return qtdNo(raiz->esquerda) + qtdNo(raiz->direita) + 1 //PÃ³s-ordem 
 }
 
-// Função usada para buscar um valor especifico na arvore binaria
+// FunÃ§Ã£o usada para buscar um valor especifico na arvore binaria
 // utiliza como parametro o valor a ser buscado e a arvore
 // para fazer uma busca recursiva
 arvore buscar(int chave, arvore raiz)
@@ -115,6 +115,8 @@ int main()
 	printf("ARVORE BINARIA\n\n");
 	printf("Digite um valor negativo para finalizar\n");
 	
+	//Um loop que ira perguntar ao usuario o valor que deseja inserir
+	//atÃ© que o usuario insira um valor negativo
 	while(chave >= 0)
 	{	
 		printf("Valor[%d]: ", n);
