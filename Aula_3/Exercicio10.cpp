@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //Leonardo Rodrigues Batista Geraldo RA:00101457
-//Ciencia da ComputaÁ„o 4 semestre
+//Ciencia da Computa√ß√£o 4 semestre
 
 struct no {
 	int chave;
@@ -14,13 +14,13 @@ struct no {
 typedef struct no* arvore;
 int opc;
 
-// FunÁ„o apenas para inicializar a arvore binaria
+// Fun√ß√£o apenas para inicializar a arvore binaria
 arvore inicializar()
 {
 	return NULL;
 }
 
-// FunÁ„o que que criara um novo NÛ da arvore e retorna o novo NÛ
+// Fun√ß√£o que que criara um novo N√≥ da arvore e retorna o novo N√≥
 arvore criarNo(int chave)
 {
 	arvore novo = (arvore) malloc(sizeof(arvore));
@@ -30,8 +30,8 @@ arvore criarNo(int chave)
 	return novo;
 }
 
-// FunÁ„o para adicionar um novo NÛ na raiz
-// que utiliza recursividade para descobrir a posiÁ„o
+// Fun√ß√£o para adicionar um novo N√≥ na raiz
+// que utiliza recursividade para descobrir a posi√ß√£o
 // que deve ser inserida
 arvore adicionar(arvore raiz, arvore no)
 {
@@ -55,8 +55,8 @@ arvore adicionar(arvore raiz, arvore no)
 }
 
 
-//FunÁ„o que ira exibir na tela os valores que existem na raiz
-// em PrÈ-ordem utilizando a raiz de forma recursiva
+//Fun√ß√£o que ira exibir na tela os valores que existem na raiz
+// em Pr√©-ordem utilizando a raiz de forma recursiva
 void exibirArvore(arvore raiz)
 {
 	if(raiz != NULL)
@@ -70,8 +70,8 @@ void exibirArvore(arvore raiz)
 	}
 }
 
-// FunÁ„o que retorna o total de NÛs que existem
-// usando a raiz para realizar uma funÁ„o recursiva
+// Fun√ß√£o que retorna o total de N√≥s que existem
+// usando a raiz para realizar uma fun√ß√£o recursiva
 // No metodo de busca In-ordem
 int qtdNo(arvore raiz)
 {
@@ -81,10 +81,10 @@ int qtdNo(arvore raiz)
 	}
 	
 	return qtdNo(raiz->esquerda) + 1 + qtdNo(raiz->direita); //In-ordem
-	//return qtdNo(raiz->esquerda) + qtdNo(raiz->direita) + 1 //PÛs-ordem 
+	//return qtdNo(raiz->esquerda) + qtdNo(raiz->direita) + 1 //P√≥s-ordem 
 }
 
-// FunÁ„o usada para buscar um valor especifico na arvore binaria
+// Fun√ß√£o usada para buscar um valor especifico na arvore binaria
 // utiliza como parametro o valor a ser buscado e a arvore
 // para fazer uma busca recursiva
 arvore buscar1(int chave, arvore raiz)
@@ -96,7 +96,7 @@ arvore buscar1(int chave, arvore raiz)
 	
 	if (raiz->chave == chave)
 	{
-		printf("O valor È a raiz");
+		printf("O valor √© a raiz");
 		return raiz;
 	}
 	
@@ -112,6 +112,10 @@ arvore buscar1(int chave, arvore raiz)
 	return NULL;
 }
 
+// Fun√ß√£o usada para buscar um valor especifico na arvore binaria
+// utiliza como parametro o valor a ser buscado e a arvore
+// e agora modificada para n√£o ser mais recursiva passando o parametro
+// arvore pai que ajudara no loop para buscar aonde est√° a chave
 arvore buscar(int chave, arvore raiz, arvore *pai)
 {
 	arvore atual = raiz;
@@ -155,7 +159,7 @@ arvore buscar(int chave, arvore raiz, arvore *pai)
 }
 
 //Um loop que ira perguntar ao usuario o valor que deseja inserir
-//atÈ que o usuario insira um valor negativo
+//at√© que o usuario insira um valor negativo
 arvore menuInserir(arvore arv)
 {
 	int chave = 1, n = 1;
@@ -227,7 +231,7 @@ int main()
 				if (arvBuscada != NULL)
 					printf("(%d)", arvBuscada->chave);
 				else
-					printf("Valor n„o encontrado");
+					printf("Valor n√£o encontrado");
 				
 				putchar('\n');	
 				system("PAUSE");
